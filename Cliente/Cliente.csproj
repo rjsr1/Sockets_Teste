@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1129B477-02B5-4250-8E69-99A50ECAE5D8}</ProjectGuid>
+    <ProjectGuid>{C20E538A-1918-4543-A0FB-5224B97A3A0A}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Sockets_Teste</RootNamespace>
-    <AssemblyName>Sockets_Teste</AssemblyName>
+    <RootNamespace>Cliente</RootNamespace>
+    <AssemblyName>Cliente</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -31,23 +31,17 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>Server</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Client.cs" />
-    <Compile Include="Server.cs" />
+    <Compile Include="Cliente.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="System.Net" />
-    <Reference Include="System.Net.Sockets, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Net.Sockets.4.1.0-beta-23516\lib\net46\System.Net.Sockets.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
